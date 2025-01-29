@@ -47,9 +47,10 @@ const Fields = () => {
     const result = await GenerateQuestionPaper.sendMessage(FINAL_PROMPT);
 
     const parsedResult = JSON.parse(await result.response?.text());
-    console.log(parsedResult);
+    console.log("parsed resutl",parsedResult.questions);
 
-    <QuestionResponse questions={result} />
+
+    <QuestionResponse questions={parsedResult.questions} />
 
     setLoading(false);
 

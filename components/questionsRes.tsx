@@ -1,6 +1,4 @@
 const QuestionResponse = (questions:any) => {
-    const result = JSON.parse(questions.questions.response?.text());
-    console.log("questions",result);
     return (
         <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
             <h1>Questions and Answers</h1>
